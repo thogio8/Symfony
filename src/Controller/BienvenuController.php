@@ -8,14 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BienvenuController extends AbstractController
 {
-    #[Route('/bienvenue', name: 'app_bienvenu')]
+    #[Route('/welcome', name: 'app_bienvenu')]
     public function bienvenue(): Response
     {
         //Appel à la vue
         return $this->render('bienvenu/index.html.twig');
     }
 
-    #[Route('/bienvenue/{prenom}', name: 'app_bienvenu_prenom')]
+    #[Route('/bienvenu/{prenom}', name: 'app_bienvenu_prenom')]
     public function bienvenueAvecPrenom(string $prenom): Response
     {
             //Appel à la vue

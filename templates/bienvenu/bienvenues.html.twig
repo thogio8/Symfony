@@ -2,10 +2,12 @@
 
 {% block title %}Bienvenue{% endblock %}
 
+
 {% block body %}
+    <h1>Bienvenue aux  personnes suivantes :</h1>
     <ul>
         {% for personne in personnes %}
-            <li>{{ personne | capitalize}}</li>
+            <li><a href="{{ path('app_bienvenu_prenom', { 'prenom' : personne }) }}"> {{ personne | capitalize}} </a></li>
         {% endfor %}
     </ul>
 
