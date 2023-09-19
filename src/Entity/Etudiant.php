@@ -78,4 +78,8 @@ class Etudiant
 
         return $this;
     }
+
+    public function getAge() : ?int {
+        return $this->dateNaissance->diff(new \DateTime())->y;
+    }
 }
